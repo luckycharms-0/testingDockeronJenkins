@@ -1,0 +1,12 @@
+version: "3"
+services:
+  # this is a test 
+  test:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: "test"
+    volumes:
+      - ./cypress:/cypress-docker/cypress
+      - ./cypress/reports:/cypress-docker/cypress/reports
+#
