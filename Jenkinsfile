@@ -1,7 +1,11 @@
-
 pipeline {
-  agent any
-   stage('Run NPM Test') {
-      steps {
-      }}
-  }
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
