@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "aftertest": "node html-report.js",
-    "removeFile": "del .\\node_modules\\cypress-cucumber-preprocessor",
+    "removeFile": "del -f .\\node_modules\\cypress-cucumber-preprocessor",
     "addFile":"move .\\docker_support_files\\cypress-cucumber-preprocessor .\\node_modules\\cypress-cucumber-preprocessor",
     "scripts": "cypress run --headless --browser chrome --spec **/*.{feature,features}",
     "test": "npm run scripts || npm run aftertest",
