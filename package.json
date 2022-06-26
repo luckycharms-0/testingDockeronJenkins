@@ -9,7 +9,7 @@
     "addFile":"mv -f .\\docker_support_files\\cypress-cucumber-preprocessor .\\node_modules\\cypress-cucumber-preprocessor",
     "scripts": "cypress run --headless --browser chrome --spec **/*.{feature,features}",
     "test": "npm run scripts || npm run aftertest",
-    "setup": "removeFile addFile --continue-on-error"
+    "setup": "npm-run-all removeFile addFile --continue-on-error"
   },
   "keywords": [],
   "author": "",
