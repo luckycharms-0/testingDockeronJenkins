@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('google') {
             steps {
-                echo 'Hello World'
+                bat 'docker-compose run google'
             }
         }
     }
