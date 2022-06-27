@@ -6,11 +6,9 @@ pipeline {
 	}
 
     stages {
-        stage('Run Docker ') {
+        stage('Run Docker') {
             steps {
-                if("${ENVIRONMENT}" == 'google'){
-					echo "${ENVIRONMENT}"
-				}
+                bat "docker-compose run ${ENVIRONMENT}"
             }
         }
     }
