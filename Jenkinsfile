@@ -13,3 +13,8 @@ pipeline {
         }
     }
 }
+
+stage('Publish HTML Report'){
+				steps{
+publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '\\cypress\\reports\\', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])				}
+		}
