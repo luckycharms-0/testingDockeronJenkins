@@ -2,13 +2,15 @@ pipeline {
     agent any
 
   parameters {
-    choice(name: 'ENVIRONMENT', choices: "google", description: 'The enviroment to run this test') 
+    choice(name: 'ENVIRONMENT', choices: ["google","yahoo"], description: 'Select the server to test') 
 	}
 
     stages {
-        stage('google') {
+        stage('Run Docker ') {
             steps {
-                echo "${ENVIRONMENT}"
+                if("${ENVIRONMENT}" == 'google'){
+					echo "${ENVIRONMENT}"
+				}
             }
         }
     }
