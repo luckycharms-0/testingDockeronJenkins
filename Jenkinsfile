@@ -1,10 +1,15 @@
+properties([parameters([choice(choices: 'yahoo', name: 'test')])])
 pipeline {
 	agent any
 	stages {
-		stage('run docker'){
-				steps{
-					bat 'docker-compose run test'
-				}
-		}
-} 
+		  stage('param check'){
+        when {
+            expression{
+                params.test == 'yahoo'
+            }
+        }
+        steps{
+            echo "testing"
+    }
+    }
 }
