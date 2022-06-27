@@ -11,5 +11,10 @@ pipeline {
                 bat "docker-compose run ${ENVIRONMENT}"
             }
         }
+		stage('publish html') {
+            steps {
+               publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '\\cypress\\reports\\', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])`
+            }
+        }
     }
 }
