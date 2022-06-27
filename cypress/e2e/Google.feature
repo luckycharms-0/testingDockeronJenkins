@@ -1,3 +1,4 @@
+@google
 Feature: Go to Google
 
     Scenario: Visiting Google

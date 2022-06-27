@@ -1,11 +1,21 @@
 version: "3"
 services:
   # this is a test 
-  test:
+  google:
     build:
       context: .
       dockerfile: ./Dockerfile
-    command: "test"
+    command: "google-docker"
+    volumes:
+      - ./cypress:/cypress-docker/cypress
+      - ./cypress/reports:/cypress-docker/cypress/reports
+#
+  # this is a test 
+  yahoo:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: "yahoo-docker"
     volumes:
       - ./cypress:/cypress-docker/cypress
       - ./cypress/reports:/cypress-docker/cypress/reports
