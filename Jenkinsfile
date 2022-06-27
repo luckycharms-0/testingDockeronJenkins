@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('google') {
             steps {
-                echo "${PARAMETERS_ENVIRONMENT}"
+                echo "${ENVIRONMENT}"
             }
         }
     }
