@@ -14,10 +14,7 @@ pipeline {
 		
 		stage('Run Docker') {
             steps {
-       publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '\\cypress\\reports\\', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])				} 
+       publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: false, reportDir: '\\cypress\\reports\\', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])				} 
             }
         }
     }
-
-}
-
